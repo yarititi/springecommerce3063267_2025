@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -27,7 +26,7 @@ public class Usuario {
 	private String tipo;
 	
 	//relaciones DB(database)
-	@OneToMany(mappedBy ="Usuario")
+	@OneToMany(mappedBy ="usuario")
 	private List<Producto> productos;
 	
 	@OneToMany(mappedBy="usuario")

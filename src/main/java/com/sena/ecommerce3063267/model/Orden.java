@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -20,9 +21,10 @@ public class Orden {
 	private Date fechacreacion;
 	private Date fecharecibida;
 	private Double total;
+	
 	@ManyToOne
 	private Usuario usuario;
-	@ManyToOne
+	@OneToMany(mappedBy="orden")
 	private List<DetalleOrden> detalle;
 
 	// constructor vacio
