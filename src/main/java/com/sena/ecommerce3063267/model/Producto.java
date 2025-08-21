@@ -90,6 +90,10 @@ public class Producto {
 	public void setCantidad(String cantidad) {
 		this.cantidad = cantidad;
 	}
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario=usuario;
+	}
 
 //Spring
 	@Override
