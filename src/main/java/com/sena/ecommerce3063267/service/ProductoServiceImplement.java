@@ -35,7 +35,7 @@ public class ProductoServiceImplement implements IProductosService{
 	}
 
 	@Override
-	public void deelete(Integer id) {
+	public void delete(Integer id) {
 		// TODO Auto-generated method stub
 		IProductosRepository.deleteById(id);
 	}
